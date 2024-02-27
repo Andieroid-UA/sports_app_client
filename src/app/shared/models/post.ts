@@ -8,11 +8,15 @@ created_at: string;
 user: User;
 
 constructor(post:any){
+  if (!post) {
+    post = {};
+  }
+
   this.id = post.id || 0;
   this.title = post.title || "";
   this.content = post.content || "";
   this.created_at = post.created_at || "";
-  this.user = new User(post.user) || null;
+  this.user = post.user ? new User(post.user) : null;
 
 }
 
