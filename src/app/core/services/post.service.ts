@@ -12,6 +12,13 @@ export class PostService {
   constructor(private http: HttpClient) { }
 
   getTimelinePosts(): Observable<Post[]> {
-    return this.http.get<Post[]>('${environment.apiUrl}/posts')
+    return this.http.get<Post[]>(`${environment.apiUrl}/posts`)
   }
 }
+
+
+// Incorrect
+//const url = 'http://localhost:4200/${environment.apiUrl}/posts';
+
+// Correct
+//const url = `http://localhost:4200/${environment.apiUrl}/posts`;

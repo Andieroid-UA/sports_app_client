@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Event } from '../../shared/models/event';
 
 @Component({
-  selector: 'app-events',
+  selector: 'app-eventss',
   standalone: true,
   imports: [EventComponent],
   templateUrl: './events.component.html',

@@ -13,7 +13,6 @@ constructor(user:any){
   this.username = user.username || "";
 }
 
-
 }
 
 
