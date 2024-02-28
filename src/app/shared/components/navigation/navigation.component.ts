@@ -28,8 +28,11 @@ isLoggedIn() {
 }
 
 logout() {
-  this.toggleSidebar();
+  if(this.isSidebarVisible){
+    this.toggleSidebar();
+  }
   this.authService.logout();
+  this.userService.setCurrentUser(null);
 }
 
 toggleSidebar() {
