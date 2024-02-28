@@ -9,7 +9,7 @@ import { error } from 'console';
   standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrl: '../auth.shared.scss'
 })
 export class LoginComponent {
   loginForm: FormGroup = new FormGroup({

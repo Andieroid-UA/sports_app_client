@@ -22,4 +22,10 @@ export const routes: Routes = [
       canActivate: [noAuthGuard]
   },
 
+  {
+    path: 'signup',
+    loadComponent: () => import('./features/auth/signup/signup.component').then((c) => c.SignupComponent),
+    canActivate: [noAuthGuard]
+  }
+
 ];
