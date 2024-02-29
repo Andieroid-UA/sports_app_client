@@ -1,4 +1,7 @@
 .container{
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 44px);
   align-items: center;
   background-color: whitesmoke;
 }
@@ -56,6 +59,6 @@ button:disabled{
   cursor: not-allowed;
 }
 
-error{
+.error{
   color: red;
 }

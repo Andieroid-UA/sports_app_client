@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthenticationService } from '../../../core/services/authentication.service';
 import { Router } from '@angular/router';
-import { error } from 'console';
 
 @Component({
   selector: 'app-login',
@@ -30,7 +29,7 @@ export class LoginComponent {
         next: (res:any) =>{
           this.router.navigate(['/'])
         },
-        error: (err:any) => {
+        error: (error:any) => {
           console.log("Error when logging", error)
           this.isError = true;
         }

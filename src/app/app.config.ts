@@ -6,6 +6,7 @@ import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { AuthenticationService } from './core/services/authentication.service';
 import { UserService } from './core/services/user.service';
 import { authInterceptor } from './core/interceptor/auth.interceptor';
+import { of } from 'rxjs';
 
 export function initializeUserData(
   userService: UserService,
@@ -27,7 +28,7 @@ export const appConfig: ApplicationConfig = {
       provide: APP_INITIALIZER,
       useFactory: initializeUserData,
       deps: [UserService, AuthenticationService],
-      multi: true
+      multi: true,
     },
     provideHttpClient(withInterceptors([authInterceptor])),
   ],

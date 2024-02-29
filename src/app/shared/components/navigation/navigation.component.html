@@ -1,8 +1,12 @@
 <nav class="navbar">
+  <div class="brand-name">Pickup Sports</div>
   <div class="nav-links">
+
     @if (isLoggedIn()) {
-      <span>Welcome, {{currentUser?.username}}</span>
-      <a (click)="logout()">Logout</a>
+
+      <span class="username">Welcome, {{ currentUser?.username }}</span>
+
+    <a (click)="logout()">Logout</a>
 
     <div class="menu-container" [class.active]="isSidebarVisible">
       <button class="menu" (click)="toggleSidebar()">☰</button>
@@ -12,14 +16,15 @@
       <a routerLink="/login">Login</a>
       <a routerLink="/signup">Sign Up</a>
     }
+
   </div>
 </nav>
 
 <div class="sidebar" [class.active]="isSidebarVisible">
-<a
-    routerLink=""
-    routerLinkActive="active"
-    [routerLinkActiveOptions]="{ exact: true }">Timeline</a>
-    <a routerLink="/events" routerLinkActive="active">Events</a>
+  <a
+  routerLink=""
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }">Timeline</a>
 
-  </div>
+  <a routerLink="/events" routerLinkActive="active">Events</a>
+</div>
